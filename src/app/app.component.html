@@ -1,0 +1,47 @@
+<h4></h4>
+<p [innerHtml]="test"></p>
+
+<!-- {{ test }} -->
+<h4>Attribute binding example</h4>
+<table>
+  <tr>
+    <td [attr.colspan]="3">fulldata</td>
+  </tr>
+  <tr>
+    <td>123</td>
+    <td>123</td>
+    <td>123</td>
+  </tr>
+</table>
+<!--one way binding-->
+<!-- {{ name }}
+<input type="text" id="nagu" value="nagu" (change)="print($event)" />
+<span></span> -->
+
+<!--two way binding-->
+<h4>two way binding examples</h4>
+<input type="text" [(ngModel)]="name" />
+{{ name }}
+<!--Ngif derivatives-->
+<h4>ng Derivatives examples</h4>
+<ng-template [ngIf]="users" [ngIfThen]="usersFoundTemplate" [ngIfElse]="nousersTemplate">
+  users found
+</ng-template>
+<ng-template #usersFoundTemplate>
+    <div *ngFor="let user of users">
+      <div [ngSwitch]="user.gender">
+        <div class="femaleBox" *ngSwitchCase="'f'">
+          {{user.name}}
+        </div>
+        <div class="maleBox" *ngSwitchCase="'m'">
+          {{user.name}}
+        </div>
+        <div class="" *ngSwitchDefault>
+          {{user.name}}
+        </div>
+      </div>
+  </div>
+</ng-template>
+<ng-template #nousersTemplate>
+no users found
+</ng-template>
