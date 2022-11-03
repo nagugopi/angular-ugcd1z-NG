@@ -14,12 +14,12 @@ export class AppComponent {
   //   console.log(event);
   //   this.name = event.target.value;
   // }
-  users =[
+  users = [
     { name: 'nagu', age: 24, gender: 'm' },
     { name: 'pooja', age: 24 },
     { name: 'gopi', age: 24, gender: 'm' },
     { name: 'atchu', age: 24, gender: 'f' },
     { name: 'max', age: 24, gender: 'm' },
-    { name: 'pooja', age: 24, gender: 'f' }
+    { name: 'pooja', age: 24, gender: 'f' },
   ];
 }
